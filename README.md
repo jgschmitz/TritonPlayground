@@ -107,6 +107,17 @@ bench(triton_softmax, x)
 * **Wrong results at row edges** → verify masks: `mask = offsets < n_elements` and pass `mask=mask, other=0` to `tl.load`/`tl.store`.
 * **Autotune very slow first run** → first compile can take time; subsequent runs are cached.
 
+* ### Compatibility
+> Triton intrinsics vary by version (e.g., some builds lack `tl.tanh`). This repo uses QuickGELU in the fused LN+activation to avoid that mismatch. If you pin different Torch/Triton combos, adjust as needed.
+
+| PyTorch | Triton | Notes                |
+|--------:|:------:|----------------------|
+| 2.3.x   | 2.1.x  | OK (default tested)  |
+
+### Notes
+- **Argmax ties:** returns the **largest** index. Swap to “first” by reducing with `min` (sentinel trick), as shown in the script comments.
+- **Kernel cache:** set a custom cache dir with `export TRITON_CACHE_DIR=./.triton`.
+
 ---
 
 ## Contributing
