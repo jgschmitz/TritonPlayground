@@ -1,6 +1,6 @@
 # Triton Kernel Playgrounds 🧪⚡
 
-Tiny, focused Python scripts to **smoke‑test your [OpenAI Triton](https://github.com/openai/triton) install** and learn the core GPU‑kernel patterns: tiling, masking, reductions, fusion, and autotuning. Each script validates correctness against PyTorch and includes a tiny benchmarking helper. I recommend a GCP image with Cuda and NVidia Drivers pre-installed makes it lots easier
+Tiny, focused Python scripts to **smoke‑test your [OpenAI Triton](https://github.com/openai/triton) install** and learn the core GPU‑kernel patterns: tiling, masking, reductions, fusion, and autotuning. Each script validates correctness against PyTorch and includes a tiny benchmarking helper. I recommend a GCP image with Cuda and NVidia Drivers pre-installed makes it lots easier - basic knowledge of triton is important if you are using unsloth -> https://unsloth.ai
 
 > **Requires:** NVIDIA GPU + CUDA, Python 3.9–3.12, recent **PyTorch** and **Triton**.
 
