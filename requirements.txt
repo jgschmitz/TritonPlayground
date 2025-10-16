@@ -1,0 +1,14 @@
+# Triton Kernel Playground Requirements
+# Compatible with CUDA 12.x and Python 3.9-3.12
+
+# Core dependencies for GPU computing
+torch>=2.0.0,<3.0.0
+triton>=3.0.0,<4.0.0
+numpy>=1.24.0,<3.0.0
+
+# Development and testing utilities (optional but recommended)
+# Uncomment the following if you want enhanced development experience:
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=5.0.0
+# mypy>=1.0.0
